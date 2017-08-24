@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Security_02" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_02_1" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_03" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_04" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_05" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_05h" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_07" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_09" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_10" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_11" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_12" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_12h" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_13" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_14" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_15" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_19" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_20" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_22" />
+    <file type="web" url="file://$PROJECT_DIR$/X" />
+    <file type="web" url="file://$PROJECT_DIR$/z3" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/z3/pom.xml" />
+        <option value="$PROJECT_DIR$/X/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_02/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_02_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_03/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_04/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_05/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_05h/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_07/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_09/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_10/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_11/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_12/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_12h/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_13/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_14/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_15/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_19/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_20/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_22/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
