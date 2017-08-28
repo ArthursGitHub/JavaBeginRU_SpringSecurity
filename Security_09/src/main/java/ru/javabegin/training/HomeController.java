@@ -18,56 +18,42 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
-	@Autowired
-	private AccessDecisionManager accessDecisionManager;
+    @Autowired
+    private AccessDecisionManager accessDecisionManager;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
-	public ModelAndView accesssDenied(Principal user) {
+    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
+        ModelAndView model = new ModelAndView();
+        if (error != null) {
+            model.addObject("error", "Invalid username or password!");
+        }
+        model.setViewName("login");
+        return model;
+    }
 
-		ModelAndView model = new ModelAndView();
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String mainPage() {
+        System.out.println(accessDecisionManager);
+        return "/content/user";
+    }
 
-		// пока русский текст без локализации, хотя так не рекомендуется!
-		if (user != null) {
-			model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
-		} else {
-			model.addObject("errorMsg", "У вас нет доступа к этой странице!");
-		}
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String adminPage() {
+        return "/content/admin";
+    }
 
-		model.setViewName("/content/accessDenied");
-		return model;
-
-	}
-
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String mainPage() {
-
-		System.out.println(accessDecisionManager);
-
-		return "/content/user";
-
-	}
-
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String adminPage() {
-
-		return "/content/admin";
-
-	}
-
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
-
-		ModelAndView model = new ModelAndView();
-		if (error != null) {
-			model.addObject("error", "Invalid username or password!");
-		}
-
-		model.setViewName("login");
-
-		return model;
-
-	}
-
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    public ModelAndView accesssDenied(Principal user) {
+        ModelAndView model = new ModelAndView();
+        // пока русский текст без локализации, хотя так не рекомендуется!
+        if (user != null) {
+            model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
+        } else {
+            model.addObject("errorMsg", "У вас нет доступа к этой странице!");
+        }
+        model.setViewName("/content/accessDenied");
+        return model;
+    }
 }
