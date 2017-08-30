@@ -4,8 +4,6 @@ import java.security.Principal;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,68 +18,51 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class HomeController {
+  private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@Autowired
-	private AccessDecisionManager accessDecisionManager;
+  @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+  public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
+    ModelAndView model = new ModelAndView();
+    if (error != null) {
+      model.addObject("error", "Invalid username or password!");
+    }
+    model.setViewName("login");
+    return model;
+  }
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+  @RequestMapping(value = "/user", method = RequestMethod.GET)
+  public String mainPage() {
+    printUserDetails();
+    return "/content/user";
+  }
 
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
-	public ModelAndView accesssDenied(Principal user) {
+  @RequestMapping(value = "/admin", method = RequestMethod.GET)
+  public String adminPage() {
+    return "/content/admin";
+  }
 
-		ModelAndView model = new ModelAndView();
+  @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+  public ModelAndView accesssDenied(Principal user) {
+    ModelAndView model = new ModelAndView();
+    // пока русский текст без локализации, хотя так не рекомендуется!
+    if (user != null) {
+      model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
+    }
+    else {
+      model.addObject("errorMsg", "У вас нет доступа к этой странице!");
+    }
+    model.setViewName("/content/accessDenied");
+    return model;
+  }
 
-		// пока русский текст без локализации, хотя так не рекомендуется!
-		if (user != null) {
-			model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
-		} else {
-			model.addObject("errorMsg", "У вас нет доступа к этой странице!");
-		}
+  private void printUserDetails() {
+    UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-		model.setViewName("/content/accessDenied");
-		return model;
+    logger.info("password = " + userDetails.getPassword());
+    logger.info("username = " + userDetails.getUsername());
 
-	}
-
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String mainPage() {
-		printUserDetails();
-
-		return "/content/user";
-	}
-
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String adminPage() {
-
-		return "/content/admin";
-
-	}
-
-	private void printUserDetails() {
-
-		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-		logger.info("password = " + userDetails.getPassword());
-		logger.info("username = " + userDetails.getUsername());
-
-		for (GrantedAuthority auth : userDetails.getAuthorities()) {
-			logger.info(auth.getAuthority());
-		}
-
-	}
-
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
-
-		ModelAndView model = new ModelAndView();
-		if (error != null) {
-			model.addObject("error", "Invalid username or password!");
-		}
-
-		model.setViewName("login");
-
-		return model;
-
-	}
-
+    for (GrantedAuthority auth : userDetails.getAuthorities()) {
+      logger.info(auth.getAuthority());
+    }
+  }
 }
