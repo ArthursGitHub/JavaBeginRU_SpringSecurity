@@ -20,67 +20,52 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class HomeController {
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@Autowired
-	private AccessDecisionManager accessDecisionManager;
+    @Autowired
+    private AccessDecisionManager accessDecisionManager;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
+        ModelAndView model = new ModelAndView();
+        if (error != null) {
+            model.addObject("error", "Invalid username or password!");
+        }
+        model.setViewName("login");
+        return model;
+    }
 
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
-	public ModelAndView accesssDenied(Principal user) {
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String mainPage() {
+        printUserDetails();
+        return "/content/user";
+    }
 
-		ModelAndView model = new ModelAndView();
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String adminPage() {
+        return "/content/admin";
+    }
 
-		// пока русский текст без локализации, хотя так не рекомендуется!
-		if (user != null) {
-			model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
-		} else {
-			model.addObject("errorMsg", "У вас нет доступа к этой странице!");
-		}
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    public ModelAndView accesssDenied(Principal user) {
+        ModelAndView model = new ModelAndView();
+        // пока русский текст без локализации, хотя так не рекомендуется!
+        if (user != null) {
+            model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
+        } else {
+            model.addObject("errorMsg", "У вас нет доступа к этой странице!");
+        }
+        model.setViewName("/content/accessDenied");
+        return model;
+    }
 
-		model.setViewName("/content/accessDenied");
-		return model;
+    private void printUserDetails() {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-	}
-
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String mainPage() {
-		printUserDetails();
-		return "/content/user";
-	}
-
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String adminPage() {
-
-		return "/content/admin";
-
-	}
-
-	private void printUserDetails() {
-
-		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-		logger.info("password = " + userDetails.getPassword());
-		logger.info("username = " + userDetails.getUsername());
-
-		for (GrantedAuthority auth : userDetails.getAuthorities()) {
-			logger.info(auth.getAuthority());
-		}
-
-	}
-
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
-
-		ModelAndView model = new ModelAndView();
-		if (error != null) {
-			model.addObject("error", "Invalid username or password!");
-		}
-
-		model.setViewName("login");
-
-		return model;
-
-	}
-
+        logger.info("password = " + userDetails.getPassword());
+        logger.info("username = " + userDetails.getUsername());
+        for (GrantedAuthority auth : userDetails.getAuthorities()) {
+            logger.info(auth.getAuthority());
+        }
+    }
 }
