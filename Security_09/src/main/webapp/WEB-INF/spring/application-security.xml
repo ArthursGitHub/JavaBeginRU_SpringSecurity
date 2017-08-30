@@ -8,10 +8,11 @@
 >
 
     <http auto-config="true">
-        <remember-me/>
         <access-denied-handler error-page="/accessDenied"/>
+
         <intercept-url pattern="/user" access="ROLE_USER"/>
         <intercept-url pattern="/admin" access="ROLE_ADMIN"/>
+
         <form-login login-page='/login'
                     default-target-url="/user"
                     authentication-failure-url="/login?error=true"
