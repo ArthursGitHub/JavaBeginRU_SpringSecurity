@@ -17,11 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class HomeController {
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     @Autowired
     private AccessDecisionManager accessDecisionManager;
-
-    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
