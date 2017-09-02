@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2" />
+    <file type="web" url="file://$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2" />
     <file type="web" url="file://$PROJECT_DIR$/httpBasicAuth" />
+    <file type="web" url="file://$PROJECT_DIR$/httpFormAuth" />
     <file type="web" url="file://$PROJECT_DIR$/Security_02" />
     <file type="web" url="file://$PROJECT_DIR$/Security_02_1" />
     <file type="web" url="file://$PROJECT_DIR$/Security_03" />
@@ -20,14 +23,10 @@
     <file type="web" url="file://$PROJECT_DIR$/Security_19" />
     <file type="web" url="file://$PROJECT_DIR$/Security_20" />
     <file type="web" url="file://$PROJECT_DIR$/Security_22" />
-    <file type="web" url="file://$PROJECT_DIR$/X" />
-    <file type="web" url="file://$PROJECT_DIR$/z3" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/z3/pom.xml" />
-        <option value="$PROJECT_DIR$/X/pom.xml" />
         <option value="$PROJECT_DIR$/Security_02/pom.xml" />
         <option value="$PROJECT_DIR$/Security_02_1/pom.xml" />
         <option value="$PROJECT_DIR$/Security_03/pom.xml" />
@@ -47,6 +46,9 @@
         <option value="$PROJECT_DIR$/Security_20/pom.xml" />
         <option value="$PROJECT_DIR$/Security_22/pom.xml" />
         <option value="$PROJECT_DIR$/httpBasicAuth/pom.xml" />
+        <option value="$PROJECT_DIR$/httpFormAuth/pom.xml" />
+        <option value="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/pom.xml" />
+        <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/pom.xml" />
       </list>
     </option>
   </component>

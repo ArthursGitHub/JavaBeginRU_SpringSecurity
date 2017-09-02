@@ -7,6 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="httpBasicAuth" />
+        <module name="httpBasicAuth2" />
+        <module name="httpFormAuth" />
+        <module name="httpFormAuth2" />
         <module name="Security_02" />
         <module name="Security_03" />
         <module name="Security_04" />
@@ -28,6 +31,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="httpBasicAuth" target="1.5" />
+      <module name="httpBasicAuth2" target="1.7" />
+      <module name="httpFormAuth" target="1.5" />
+      <module name="httpFormAuth2" target="1.7" />
       <module name="Security_02" target="1.6" />
       <module name="Security_02_1" target="1.6" />
       <module name="Security_03" target="1.6" />
@@ -46,8 +52,6 @@
       <module name="Security_19" target="1.6" />
       <module name="Security_20" target="1.6" />
       <module name="Security_22" target="1.6" />
-      <module name="X" target="1.5" />
-      <module name="z2" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
