@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="httpFormAuth:war">
+    <output-path>$PROJECT_DIR$/httpFormAuth/target</output-path>
+    <root id="archive" name="httpFormAuth-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="httpFormAuth:war exploded" />
+    </root>
+  </artifact>
+</component>
