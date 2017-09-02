@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="httpFormAuth2:war exploded">
+    <output-path>$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/target/security</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="httpFormAuth2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/target/security/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="httpFormAuth2/web/Web" />
+    </root>
+  </artifact>
+</component>

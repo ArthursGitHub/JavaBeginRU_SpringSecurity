@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="httpBasicAuth2:war">
+    <output-path>$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/target</output-path>
+    <root id="archive" name="security.war">
+      <element id="artifact" artifact-name="httpBasicAuth2:war exploded" />
+    </root>
+  </artifact>
+</component>
