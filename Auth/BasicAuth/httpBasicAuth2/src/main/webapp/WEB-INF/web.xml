@@ -34,6 +34,11 @@
 
     <!-- ============ ResponseServlet=========== -->
 
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>file</realm-name>
+    </login-config>
+
     <security-constraint>
         <display-name>SecurityConstraint</display-name>
         <web-resource-collection>
@@ -47,11 +52,5 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    <login-config>
-        <auth-method>BASIC</auth-method>
-        <realm-name>file</realm-name>
-    </login-config>
-
 
 </web-app>
-
