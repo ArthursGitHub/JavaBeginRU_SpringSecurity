@@ -19,9 +19,9 @@
       <module fileurl="file://$PROJECT_DIR$/Security_19/Security_19.iml" filepath="$PROJECT_DIR$/Security_19/Security_19.iml" />
       <module fileurl="file://$PROJECT_DIR$/Security_20/Security_20.iml" filepath="$PROJECT_DIR$/Security_20/Security_20.iml" />
       <module fileurl="file://$PROJECT_DIR$/Security_22/Security_22.iml" filepath="$PROJECT_DIR$/Security_22/Security_22.iml" />
-      <module fileurl="file://$PROJECT_DIR$/httpBasicAuth/httpBasicAuth.iml" filepath="$PROJECT_DIR$/httpBasicAuth/httpBasicAuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth1/httpBasicAuth1.iml" filepath="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth1/httpBasicAuth1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/httpBasicAuth2.iml" filepath="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/httpBasicAuth2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/httpFormAuth/httpFormAuth.iml" filepath="$PROJECT_DIR$/httpFormAuth/httpFormAuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth1/httpFormAuth1.iml" filepath="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth1/httpFormAuth1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/httpFormAuth2.iml" filepath="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/httpFormAuth2.iml" />
     </modules>
   </component>

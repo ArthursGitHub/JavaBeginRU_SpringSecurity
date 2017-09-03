@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth1" />
     <file type="web" url="file://$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2" />
+    <file type="web" url="file://$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth1" />
     <file type="web" url="file://$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2" />
-    <file type="web" url="file://$PROJECT_DIR$/httpBasicAuth" />
-    <file type="web" url="file://$PROJECT_DIR$/httpFormAuth" />
     <file type="web" url="file://$PROJECT_DIR$/Security_02" />
     <file type="web" url="file://$PROJECT_DIR$/Security_02_1" />
     <file type="web" url="file://$PROJECT_DIR$/Security_03" />
@@ -45,8 +45,8 @@
         <option value="$PROJECT_DIR$/Security_19/pom.xml" />
         <option value="$PROJECT_DIR$/Security_20/pom.xml" />
         <option value="$PROJECT_DIR$/Security_22/pom.xml" />
-        <option value="$PROJECT_DIR$/httpBasicAuth/pom.xml" />
-        <option value="$PROJECT_DIR$/httpFormAuth/pom.xml" />
+        <option value="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth1/pom.xml" />
+        <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth1/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/pom.xml" />
       </list>
