@@ -14,7 +14,8 @@ import java.io.PrintWriter;
 @WebServlet("/auth")
 @ServletSecurity(
         value = @HttpConstraint(rolesAllowed = {"auth"}),
-        httpMethodConstraints = {@HttpMethodConstraint(value = "GET", rolesAllowed = {"auth"}),@HttpMethodConstraint(value = "POST")}
+        httpMethodConstraints = {@HttpMethodConstraint(value = "GET", rolesAllowed = {"auth"}),
+                                 @HttpMethodConstraint(value = "POST")}
         )
 public class AuthServlet extends HttpServlet {
 
