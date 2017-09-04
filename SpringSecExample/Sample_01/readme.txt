@@ -1,0 +1,1 @@
+http://www.journaldev.com/2736/spring-security-example-userdetailsservice
