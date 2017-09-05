@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringSecExample/Sample_01/Sample_01.iml" filepath="$PROJECT_DIR$/SpringSecExample/Sample_01/Sample_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Security_02/Security_02.iml" filepath="$PROJECT_DIR$/Security_02/Security_02.iml" />
       <module fileurl="file://$PROJECT_DIR$/Security_03/Security_03.iml" filepath="$PROJECT_DIR$/Security_03/Security_03.iml" />
       <module fileurl="file://$PROJECT_DIR$/Security_04/Security_04.iml" filepath="$PROJECT_DIR$/Security_04/Security_04.iml" />

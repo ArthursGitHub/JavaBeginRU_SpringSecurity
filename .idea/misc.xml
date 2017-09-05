@@ -23,6 +23,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Security_19" />
     <file type="web" url="file://$PROJECT_DIR$/Security_20" />
     <file type="web" url="file://$PROJECT_DIR$/Security_22" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringSecExample/Sample_01" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -49,6 +50,7 @@
         <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth1/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/FormBaseAuth/httpFormAuth2/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecExample/Sample_01/pom.xml" />
       </list>
     </option>
   </component>
