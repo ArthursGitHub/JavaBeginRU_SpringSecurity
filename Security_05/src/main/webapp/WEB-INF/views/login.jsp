@@ -4,29 +4,29 @@
 
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
 </head>
 
 <body>
-	<c:if test="${not empty error}">
-		${error}
-	</c:if>
+    <c:if test="${not empty error}">
+        ${error}
+    </c:if>
 
-	<form name='form_login' action="j_spring_security_check" method='POST'>
-		<table>
-			<tr>
-				<td>User:</td>
-				<td><input type='text' name='user_login' value=''></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type='password' name='password_login' /></td>
-			</tr>
-			<tr>
-				<td><input name="submit" type="submit" value="submit" /></td>
-			</tr>
-		</table>
-	</form>
+    <form method='POST' action="j_spring_security_check" name='form_login'>
+        <table>
+            <tr>
+                <td>User:</td>
+                <td><input type='text' name='user_login' value=''></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type='password' name='password_login' /></td>
+            </tr>
+            <tr>
+                <td><input name="submit" type="submit" value="submit" /></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
