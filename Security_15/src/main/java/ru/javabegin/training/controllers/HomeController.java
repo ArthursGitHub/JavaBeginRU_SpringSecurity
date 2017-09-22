@@ -23,73 +23,73 @@ import ru.javabegin.training.services.ProcessInterface;
 @Controller
 public class HomeController {
 
-	@Autowired
-	private AccessDecisionManager accessDecisionManager;
+    @Autowired
+    private AccessDecisionManager accessDecisionManager;
 
-	@Autowired
-	private ProcessInterface process;
+    @Autowired
+    private ProcessInterface process;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
-	public ModelAndView accesssDenied(Principal user) {
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    public ModelAndView accesssDenied(Principal user) {
 
-		ModelAndView model = new ModelAndView();
+        ModelAndView model = new ModelAndView();
 
-		// пока русский текст без локализации, хотя так не рекомендуется!
-		if (user != null) {
-			model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
-		} else {
-			model.addObject("errorMsg", "У вас нет доступа к этой странице!");
-		}
+        // пока русский текст без локализации, хотя так не рекомендуется!
+        if (user != null) {
+            model.addObject("errorMsg", user.getName() + " у вас нет доступа к этой странице!");
+        } else {
+            model.addObject("errorMsg", "У вас нет доступа к этой странице!");
+        }
 
-		model.setViewName("/content/accessDenied");
-		return model;
+        model.setViewName("/content/accessDenied");
+        return model;
 
-	}
+    }
 
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String mainPage() {
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String mainPage() {
 
-		logger.info(process.getMessage());
+        logger.info(process.getMessage());
 
-		printUserDetails();
+        printUserDetails();
 
-		return "/content/user";
-	}
+        return "/content/user";
+    }
 
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String adminPage() {
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String adminPage() {
 
-		return "/content/admin";
+        return "/content/admin";
 
-	}
+    }
 
-	private void printUserDetails() {
+    private void printUserDetails() {
 
-		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-		logger.info("password = " + userDetails.getPassword());
-		logger.info("username = " + userDetails.getUsername());
+        logger.info("password = " + userDetails.getPassword());
+        logger.info("username = " + userDetails.getUsername());
 
-		for (GrantedAuthority auth : userDetails.getAuthorities()) {
-			logger.info(auth.getAuthority());
-		}
+        for (GrantedAuthority auth : userDetails.getAuthorities()) {
+            logger.info(auth.getAuthority());
+        }
 
-	}
+    }
 
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
+    @RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
+    public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
 
-		ModelAndView model = new ModelAndView();
-		if (error != null) {
-			model.addObject("error", "Invalid username or password!");
-		}
+        ModelAndView model = new ModelAndView();
+        if (error != null) {
+            model.addObject("error", "Invalid username or password!");
+        }
 
-		model.setViewName("login");
+        model.setViewName("login");
 
-		return model;
+        return model;
 
-	}
+    }
 
 }
