@@ -7,7 +7,7 @@
                 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
 >
 
-<http auto-config="true">
+    <http auto-config="true">
         <remember-me data-source-ref="dataSource"/>
         <access-denied-handler error-page="/accessDenied"/>
         <intercept-url pattern="/user" access="ROLE_USER"/>
