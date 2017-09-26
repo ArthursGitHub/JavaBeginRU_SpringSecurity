@@ -6,5 +6,4 @@ public interface ProcessInterface {
 
     @Secured("ROLE_ADMIN")
     String getMessage();
-
 }
