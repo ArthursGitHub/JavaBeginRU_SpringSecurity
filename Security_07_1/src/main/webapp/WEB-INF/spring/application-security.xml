@@ -28,11 +28,10 @@
         </authentication-provider>
     </authentication-manager>
 
-
-
-
-
-
+<!--
+    Пример из книги
+    Spring Security 3.1
+-->
     <beans:bean id="unanimousBased" class="org.springframework.security.access.vote.UnanimousBased">
         <beans:constructor-arg index="0">
             <beans:list>
@@ -52,7 +51,5 @@
 
     <beans:bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter"/>
     <beans:bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter"/>
-
-
 
 </beans:beans>
