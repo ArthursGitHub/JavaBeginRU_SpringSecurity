@@ -1,0 +1,2 @@
+http://www.mkyong.com/spring-security/spring-security-form-login-example/
+http://www.mkyong.com/spring-security/spring-security-custom-login-form-annotation-example/
