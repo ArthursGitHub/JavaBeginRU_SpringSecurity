@@ -49,6 +49,7 @@
             <url-pattern>/*</url-pattern>
         </web-resource-collection>
         <user-data-constraint>
+            <!--    To force your web application to work with SSL, you simply need to add the following code to your web.xml file  -->
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
