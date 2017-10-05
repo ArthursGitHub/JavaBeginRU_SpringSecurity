@@ -52,5 +52,9 @@
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    
+
+    <!--
+    См. https://dzone.com/articles/setting-ssl-tomcat-5-minutes
+    -->
+
 </web-app>
