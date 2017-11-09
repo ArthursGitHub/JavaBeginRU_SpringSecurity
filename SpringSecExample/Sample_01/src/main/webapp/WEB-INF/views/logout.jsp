@@ -1,10 +1,10 @@
 <html>
 <head>
-	<title>Logout Page</title>
+    <title>Logout Page</title>
 </head>
 <body>
 <h2>
-	Logout Successful!  
+    Logout Successful!
 </h2>
 
 </body>
