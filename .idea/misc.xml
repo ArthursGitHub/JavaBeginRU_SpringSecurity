@@ -12,9 +12,11 @@
     <file type="web" url="file://$PROJECT_DIR$/Security_05" />
     <file type="web" url="file://$PROJECT_DIR$/Security_05h" />
     <file type="web" url="file://$PROJECT_DIR$/Security_07" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_07_1" />
     <file type="web" url="file://$PROJECT_DIR$/Security_09" />
     <file type="web" url="file://$PROJECT_DIR$/Security_10" />
     <file type="web" url="file://$PROJECT_DIR$/Security_11" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_11_1" />
     <file type="web" url="file://$PROJECT_DIR$/Security_12" />
     <file type="web" url="file://$PROJECT_DIR$/Security_12h" />
     <file type="web" url="file://$PROJECT_DIR$/Security_13" />
@@ -35,6 +37,7 @@
         <option value="$PROJECT_DIR$/Security_05/pom.xml" />
         <option value="$PROJECT_DIR$/Security_05h/pom.xml" />
         <option value="$PROJECT_DIR$/Security_07/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_07_1/pom.xml" />
         <option value="$PROJECT_DIR$/Security_09/pom.xml" />
         <option value="$PROJECT_DIR$/Security_10/pom.xml" />
         <option value="$PROJECT_DIR$/Security_11/pom.xml" />
@@ -51,6 +54,7 @@
         <option value="$PROJECT_DIR$/Auth/BasicAuth/httpBasicAuth2/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecExample/Sample_01/pom.xml" />
         <option value="$PROJECT_DIR$/Security_19_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_11_1/pom.xml" />
       </list>
     </option>
   </component>
