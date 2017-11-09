@@ -1,4 +1,5 @@
+Hello
 <%
-session.invalidate();
+//session.invalidate();
 response.sendRedirect("auth");
 %>
