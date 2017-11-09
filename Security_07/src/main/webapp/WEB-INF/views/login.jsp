@@ -15,6 +15,7 @@
             <label> Username </label> <input type='text' name='user_login' value=''>
             <label> Password </label> <input type='password' name='password_login'/>
         </fieldset>
+
         <footer>
             <input type="submit" class="btnLogin" value="Submit">
 
