@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:b="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <http pattern="/favicon.ico" security="none" />
+
+    <http use-expressions="true">
+        <intercept-url pattern="/" access="isFullyAuthenticated() or isAnonymous()"/>
+        <intercept-url pattern="/login.jsp*" access="isFullyAuthenticated() or isAnonymous()"/>
+        <intercept-url pattern="/admin" access="hasRole('ADMIN')"/>
+        <intercept-url pattern="/exitUser*" access="isFullyAuthenticated() or isAnonymous()"/>
+        <intercept-url pattern="/**" access="hasRole('USER')"/>
+
+        <form-login login-page="/login.jsp"
+                    authentication-failure-url="/login.jsp?login_error=1"
+                    authentication-success-handler-ref="savedRequestAwareAuthenticationSuccessHandler"/>
+        <access-denied-handler error-page="/accessDenied.jsp"/>
+        <http-basic/>
+        <logout logout-success-url="/exitUser.jsp"/>
+        <remember-me
+                key="myAppKey"
+                user-service-ref="jdbcGroupsImpl"
+                token-repository-ref="tokenRepository"
+                remember-me-cookie="remember-me-cookieName"
+                remember-me-parameter="remember-me-parameter"
+                token-validity-seconds="1800"/>
+        <headers/>
+        <csrf/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="jdbcGroupsImpl"/>
+    </authentication-manager>
+
+    <b:bean id="jdbcGroupsImpl" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <b:property name="enableGroups" value="true"/>
+        <b:property name="enableAuthorities" value="false"/>
+        <b:property name="dataSource" ref="dataSource"/>
+    </b:bean>
+
+    <b:bean id="tokenRepository"
+          class="org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl">
+        <b:property name="dataSource" ref="dataSource"/>
+    </b:bean>
+
+</b:beans>

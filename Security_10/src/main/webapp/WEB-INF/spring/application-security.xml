@@ -8,7 +8,6 @@
 >
 
     <http auto-config="true">
-        <remember-me/>
         <access-denied-handler error-page="/accessDenied"/>
         <intercept-url pattern="/user" access="ROLE_USER"/>
         <intercept-url pattern="/admin" access="ROLE_ADMIN"/>
@@ -16,7 +15,8 @@
                     default-target-url="/user"
                     authentication-failure-url="/login?error=true"
                     username-parameter="user_login"
-                    password-parameter="password_login"/>
+                    password-parameter="password_login"
+        />
         <logout logout-success-url="/login"/>
     </http>
 
