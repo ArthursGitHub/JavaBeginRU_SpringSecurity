@@ -1,0 +1,47 @@
+Security_02
+Обычное MVC веб приложение.
+
+Security_03
+Обычное MVC веб приложение.
+
+Security_04
+Подключили SpringSecurity
+
+Security_05
+Сделали кастомную форму login, admin, user
+
+Security_05h
+Прикрутили стили
+
+Security_07 (от Security_05)
+Добавили кастомную формы login, admin, user, accessDenied
+
+Security_07_1
+Прикручен не дефолтный AccessDecisionManager, а именно AccessDecisionManager; а также RoleVoter и AuthenticatedVoter
+
+Security_09
+В контроллер добавили вывод accessDecisionManager, ничего интересного
+
+Security_10
+Через SecurityContextHolder вычитали UserDetails
+
+Security_11
+Добавили remember-me функционал, пример не работоспособен, т.к. не дописан функционал
+
+Security_11_1
+Пример с работающим remember-me функционалом (см. Security_12h)
+
+Security_12 (от Security_10)
+Пользователей теперь вычитываем из БД
+
+Security_12h
+Приделали remember-me функционал
+
+Security_13
+Группы ролей
+
+Security_14
+Защита на уровне методов
+
+Security_15
+В базе вместо паролей храним их хеши
