@@ -1,0 +1,10 @@
+01-Sep-2017 20:18:00.699 FINE [http-nio-8080-exec-5] org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId  Requested cookie session id is 9DD286EB7AFFF0B06C9438BD419C748D
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.AuthenticatorBase.invoke Security checking request GET /index.jsp
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.realm.RealmBase.findSecurityConstraints   Checking constraint 'SecurityConstraint[cp]' against GET /index.jsp --> true
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.realm.RealmBase.findSecurityConstraints   Checking constraint 'SecurityConstraint[cp]' against GET /index.jsp --> true
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Calling hasUserDataPermission()
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.realm.RealmBase.hasUserDataPermission   User data constraint has no restrictions
+01-Sep-2017 20:18:00.700 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Calling authenticate()
+01-Sep-2017 20:18:00.701 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.FormAuthenticator.doAuthenticate Save request in session '9DD286EB7AFFF0B06C9438BD419C748D'
+01-Sep-2017 20:18:00.701 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.FormAuthenticator.forwardToLoginPage Forwarding request for [/index.jsp] made with method [GET] to login page [/login.jsp] of context [] using request method GET
+01-Sep-2017 20:18:00.704 FINE [http-nio-8080-exec-5] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Failed authenticate() test

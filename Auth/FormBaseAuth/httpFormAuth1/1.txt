@@ -1,0 +1,14 @@
+01-Sep-2017 20:10:09.154 FINE [http-nio-8080-exec-10] org.apache.catalina.connector.CoyoteAdapter.parseSessionCookiesId  Requested cookie session id is A11601E4AE1B926B490038B84B3B6C53
+01-Sep-2017 20:10:09.154 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke Security checking request GET /index.jsp
+01-Sep-2017 20:10:09.154 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke We have cached auth type FORM for principal GenericPrincipal[javabycode(auth,)]
+01-Sep-2017 20:10:09.154 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.findSecurityConstraints   Checking constraint 'SecurityConstraint[cp]' against GET /index.jsp --> true
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.findSecurityConstraints   Checking constraint 'SecurityConstraint[cp]' against GET /index.jsp --> true
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Calling hasUserDataPermission()
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.hasUserDataPermission   User data constraint has no restrictions
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Calling authenticate()
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.checkForCachedAuthentication Already authenticated [javabycode]
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Calling accessControl()
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.hasResourcePermission   Checking roles GenericPrincipal[javabycode(auth,)]
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.hasRole Username [javabycode] has role [auth]
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.realm.RealmBase.hasResourcePermission Role found:  auth
+01-Sep-2017 20:10:09.155 FINE [http-nio-8080-exec-10] org.apache.catalina.authenticator.AuthenticatorBase.invoke  Successfully passed all security constraints
