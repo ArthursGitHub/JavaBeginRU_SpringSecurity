@@ -9,7 +9,7 @@
 
     <http use-expressions="true">
         <intercept-url pattern="/user" access="isAuthenticated()"/>
-        <intercept-url pattern="/admin" access="isAuthenticated()"/>
+        <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')()"/>
         <form-login login-page='/login'
                     default-target-url="/user"
                     authentication-failure-url="/login?error=true"
@@ -23,8 +23,14 @@
         <authentication-provider>
             <user-service>
                 <user name="user" password="user" authorities="ROLE_USER"/>
+                <user name="admin" password="admin" authorities="ROLE_ADMIN"/>
             </user-service>
         </authentication-provider>
     </authentication-manager>
 
 </beans:beans>
+
+<!--
+См. SecurityExpressionRoot и SecurityExpressionOperations
+С SpelExpression работает вотер WebExpressionVoter
+-->
