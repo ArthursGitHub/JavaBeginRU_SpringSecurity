@@ -9,6 +9,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Security_02_1" />
     <file type="web" url="file://$PROJECT_DIR$/Security_03" />
     <file type="web" url="file://$PROJECT_DIR$/Security_04" />
+    <file type="web" url="file://$PROJECT_DIR$/Security_04_01" />
     <file type="web" url="file://$PROJECT_DIR$/Security_05" />
     <file type="web" url="file://$PROJECT_DIR$/Security_05h" />
     <file type="web" url="file://$PROJECT_DIR$/Security_07" />
@@ -55,6 +56,7 @@
         <option value="$PROJECT_DIR$/SpringSecExample/Sample_01/pom.xml" />
         <option value="$PROJECT_DIR$/Security_19_1/pom.xml" />
         <option value="$PROJECT_DIR$/Security_11_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Security_04_01/pom.xml" />
       </list>
     </option>
   </component>

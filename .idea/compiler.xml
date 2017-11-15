@@ -14,6 +14,7 @@
         <module name="Security_02" />
         <module name="Security_03" />
         <module name="Security_04" />
+        <module name="Security_04_01" />
         <module name="Security_05" />
         <module name="Security_05h" />
         <module name="Security_07" />
@@ -42,6 +43,7 @@
       <module name="Security_02_1" target="1.6" />
       <module name="Security_03" target="1.6" />
       <module name="Security_04" target="1.6" />
+      <module name="Security_04_01" target="1.6" />
       <module name="Security_05" target="1.6" />
       <module name="Security_05h" target="1.6" />
       <module name="Security_07" target="1.6" />
