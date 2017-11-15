@@ -5,7 +5,10 @@ Security_03
 Обычное MVC веб приложение.
 
 Security_04
-Подключили SpringSecurity
+Подключили SpringSecurity с дефолтной формой аутентификации.
+
+Security_04_01
+Подключили дайджест аутентификацию.
 
 Security_05
 Сделали кастомную форму login, admin, user
